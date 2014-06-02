@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html xmlns='http://www.w3.org/1999/xhtml'>
+
+<head>
+<title>Trending Research from Altmetric.com</title>
+</head>
+
+<body>
+
+<div id="trending"></div>
+
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+<script>
+$.getJSON('YOUR_CUSTOM_KEY_API_URL_HERE', function(data) {
+      var output="<ul>";
+      for (var i in data.results) {
+          output+="<li>" + '<a href= "' + data.results[i].details_url + '" target="_blank" >' + '<img src= "' + data.results[i].images.small + '" />' + '</a>' + '<h3>' + '<a href= "' + data.results[i].url + '" >' + data.results[i].title + '</a>' + " in " + '<em>' + data.results[i].journal + '</em>' + '</h3>' + "</li>" + '<hr />';
+      }
+
+      output+="</ul>";
+      document.getElementById("trending").innerHTML=output;
+});
+</script>
+
+</body>
+</html>
