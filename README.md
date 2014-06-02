@@ -11,4 +11,7 @@ Provides a simple starting point for displaying data from Altmetric.com
 
 3. Replace 'YOUR_CUSTOM_KEY_API_URL_HERE' on line 16 of trending.html with your API url.
 
+4. See a working example here:  http://research.mblwhoilibrary.org/static/en/trending/trending.html 
+
+
 ![alt tag](https://raw.github.com/jfurfey/Altmetric-display/master/screenshot-API-button.png)
